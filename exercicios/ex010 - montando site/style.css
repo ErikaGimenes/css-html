@@ -1,0 +1,209 @@
+@charset "UTF-8"; /* para aceitar todos caracteres e acentos*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*fonte do google*/
+
+@font-face { /* aqui quando vc faz o download da fonte, como por ex do dafont.com */
+    font-family:'android';
+    src: url(./fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+
+* { /* esse configuracao e geral, em todo o seu site nao tera margin ou padding*/
+    margin: 0px;
+    padding: 0px;
+
+}
+
+:root { /* aqui e uma variavel do css, que vc deixa ja salvo as cores/letras que vc definiu para o seu site, inclusive, se vc precisar alterar as cores, so alterar no root, que ira alterar no site inteiro*/
+    --cor0: #BFFFD2;
+    --cor1: #6BED92;
+    --cor2: #55BD74;
+    --cor3: #316E43;
+    --cor4: #56705E;
+
+    --font-padrao: arial, Verdana, Helvetica, sans-serif; /* vc coloca mais de uma fonte, caso uma nao funcione, o css considera a proxima*/
+    --font-destaque:'Bebas Neue', cursive;
+    --font-android: 'android', cursive;
+}
+
+body{
+    background-color:var(--cor0); /*cor que eu coloquei no root*/
+    font-family: var(--font-padrao);
+}
+
+a.externo::after { /* esse styling para todo link (a) nomeado em externo vai ter um emoji depois do link*/
+    content: '\00A0\1F517'; /* o primeiro codigo e para dar espaco entre a frase e a imagem*/
+}
+   
+header{
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
+    min-height: 150px;
+    text-align: center;
+    padding-bottom: 25px;
+
+}
+
+header > h1{ /* o H1 ta dentro de header, portanto ele e filho do header, vc usa o simbolo > para simbolizar q e filho*/
+    font-family: var(--font-destaque);
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.74);
+    font-size: 3em;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    
+}
+
+header > p { /**/ 
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    color:white;
+    margin:auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    max-width: 600px;
+    text-shadow: 2px 2px 4px black;
+}
+
+nav {
+    background-color: var(--cor3);
+    padding: 10px;
+}
+
+nav > a {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+nav > a:hover{
+    background-color:var(--cor2);
+    color:var(--cor0);
+    
+}
+
+main{
+    background-color: white;
+    padding:20px;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: justify;
+    min-width: 320px; /*o tamanho minino que o elemento main vai ocupar no navagedor do cliente e maximo que ele vai chegar no navegador, para caso o cliente abrir navegador na televisao, nao ficar muito grande e ruim pra ler*/
+    max-width: 800px; /*320px sao os celulares antigos que a tela e menor, se atentar aos tamanhos*/
+    box-shadow: 3px 3px 15px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main img { /* aqui a imagem vai se ajustar com o tamanho da tela, porem e importante ajustar as imagens com tamanhos diferentes para ficar bonito na tela*/
+    width:100%;
+}
+
+
+main h1 { /**/
+    font-family: 'android';
+    color: #56705E;
+    font-weight: normal;
+
+}
+
+main h2 {
+    font-family: 'android';
+    color: var(--cor3);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor0), transparent);
+    text-indent: 8px;
+    
+}
+
+main p {
+    text-indent: 30px;
+    text-align: justify;
+    margin: 15px 0px;
+    font-size: 1em;
+    line-height: 2em; /* aqui e o espacamento entre as linhas*/
+}
+
+main strong {
+    color:var(--cor3);
+    font-weight: bold;
+    
+}   
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor3);
+    background-color: var(--cor0);
+    padding: 2px 5px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
+div.video {
+    background-color: var(--cor3);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 58%;
+    position: relative;
+}
+
+div.video iframe {  /* quando coloca em porcentagem o video se ajusta de acordo com a tela*/
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: var(--cor0);
+    padding: 10px;
+    border-radius: 10px;    
+    box-shadow: 3px 3px 8px black;
+    line-height: 1.5em;
+}
+
+aside > h3 {
+    background-color: rgb(2, 143, 131);
+    color:white;
+    padding-top: 8px;
+    padding-left: 5px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+    height: 35px;
+}
+
+aside > ul {
+    text-decoration: underline;
+    list-style-position: inside;
+    columns: 2;
+}
+
+aside > ul > li > abbr {
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--cor3);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px; 
+}
+
+footer > p > a {
+    color: white;
+    font-weight: bolder;
+}
+
+footer a:hover {
+    color:var(--cor0);
+}

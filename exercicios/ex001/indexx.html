@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            max-width: 100%; /* com esse tag vc faz com que todos os devices consigam abrir a imagem para tamanho proporcional a tela. so que sempre colocar imagens menores para nao ocupar tanta memoria em especial para quem acessa do celular.*/
+        }
+        
+    </style>
+</head>
+<body>
+    <picture>
+        <source media="(max-width:520px )" srcset="../ex001/espacoast500.jpg" type="image/png">
+        <source media="(max-width:750px )" srcset="../ex001/espacoast750.jpg" type="image/png">
+        <img src="../ex001/espacoast.jpg" alt="astronauta no espaco">
+    </picture>
+    
+</body>
+</html> 

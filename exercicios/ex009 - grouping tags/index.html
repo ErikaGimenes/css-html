@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+    <style>
+        body{ /* aqui vai ser a configuracao para o body, mas se eu fazer alguma estilizacao especifica em algum elemento, essa estilizacao sera substituida*/
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aquamarine;
+            margin: 0;
+            
+        }
+
+        header{
+            background-color: white;
+            padding:10px;
+            margin: 10px;
+        }
+
+        h1 {
+            box-shadow: inset 2px 1px 14px 6px black; /* o inset faz com que a sombra fique pra dentro, primeiro deslocamento horizontal, vertical, blur e spread*/
+        }
+
+        nav {
+            background-color: rgb(15, 151, 151);
+            box-shadow: 4px 5px 1px black;
+        }
+
+        nav > a {
+            color:white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding:10px;
+            margin: 10px;
+            border-radius: 15px 30px;
+            box-shadow: 4px 4px 50px 5px black;
+        }
+
+        article {
+            background-color: rgb(183, 236, 236);
+        }
+
+        article > aside {
+            background-color: rgb(30, 134, 134);
+        }
+
+        footer{
+            text-align: center;
+            color:white;
+            background-color: black;
+            padding:2px;
+        }
+
+        #bola{
+            height:100px;
+            width:100px;
+            margin:10px;
+            border-radius: 50%;
+            background-color: white;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <header> <!--cabecalho-->
+        <h1>Meu site</h1>
+        <nav>
+            <a href="@">link</a>
+            <a href="@">link</a>
+            <a href="@">link</a>
+            <a href="@">link</a>
+            <a href="@">link</a>
+        </nav>
+    </header>
+    <main> <!--principal conteudo do site-->
+        <section id="noticias">
+            <p>Esportes Politica Tecnologia</p>
+        </section>
+
+        <section id="assuntos">
+            <article>
+                <h2>Noticias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit non labore commodi cupiditate sint exercitationem temporibus illum nulla impedit ab, deserunt, esse unde eum veniam eveniet consequatur reiciendis voluptatum necessitatibus.</p>
+                <aside>
+                    <p>Artigo escrito por cursoemvideo</p>
+                </aside>
+            </article>
+
+        </section>
+    </main>
+    <footer>Desenvolvido por Curso em Videos</footer>
+    <div id="bola"></div>
+
+
+    
+</body>
+</html>

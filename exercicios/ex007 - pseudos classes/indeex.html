@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        a {
+            color:rgb(13, 13, 87);
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: red; /* quando a pessoa ja clicou no link, esse link vai ficar vermelha no navegador dela*/
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color:rgb(14, 13, 13);
+        }
+
+        a:active { /*quando vc clica no link e vc quer que ele faca algo, mude de cor, sublinhe...*/
+            color:yellow;
+        }
+
+        a::before{ /* adicionar algo antes*/
+            content: '☞';
+            color:black;
+            font-weight: bold;
+        }
+
+        a::after {
+            content: '[link] ☜'; /* com dois pontos :: e chamado pseudo elemento, aqui permite que vc estilize uma parte do elemento selecionado*/
+            text-decoration: none; 
+            font-weight: bold;
+            color:black;
+        }
+
+        .especial {
+            background-color: aquamarine;
+        }
+
+        .especial::before { /*se vc quiser selicionar apena um, so youtube por ex: vc cria class="" para youtube e estiliza so ele */
+            content: '❤';
+            color:red;
+    }
+
+        .especial::after { /*se vc quiser selicionar apena um, so youtube por ex: vc cria class="" para youtube e estiliza so ele */
+            content: '❤';
+            color:red;
+        }
+    
+        
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositorio Github</a></li>
+        <li><a href="https://youtube.com/cursoemvideo">Canal Youtube</a></li>
+        <li><a href="https://cursoemvideo.com">Site cursoemvideo</a>   </li>
+    </ul>
+
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositorio Github</a></li>
+        <li><a href="https://youtube.com/cursoemvideo" class="especial">Canal Youtube</a></li>
+        <li><a href="https://cursoemvideo.com">Site cursoemvideo</a>   </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- para deixar compativel com todos caracteres como por ex: acento agudo-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/e536d66be6.js" crossorigin="anonymous"></script>
+    <title>meu primeiro website</title>
+    <style>
+         mark{
+            background:limegreen  /*jeito de estilisar a pagina, vc coloca css aqui*/
+         }
+
+    </style>
+    
+</head>
+<body>
+    <h1>Ola, <MARK>mundo</MARK>!</h1> 
+    <hr> <!-- hr vc usa criar uma linha-->
+    <p> Esse e o meu primeiro documento em HTML! Estou muito feliz</p>
+    <p>este e o momento unico</p>
+    <h2>Paragrafos e quebras de <mark>linha</mark></h2>
+    <hr> <!-- hr vc usa criar uma linha-->
+    <p>voce pode escrever um paragrafo de qualquer jeito basta colocar tudo no meio do par de tags &lt;p&gt;</p> <!-- esse codigos sao para o simbolos greater > than and less than <-->
+    <p>se precisar quebrar o texto em algum lugar <em>especifico</em> <br> como esse, voce pode usar a tag &lt;/p&gt;</p>
+    <p>vamos adicionar alguns simbolos especiais:
+        &reg;
+        &copy;
+        &trade;
+        &euro;
+        &pound;
+        <img src="" alt="">
+    
+    </p>
+    <p>Vamos adicionar emojis:
+        &#x2764; <!--pra adicionar emojis sempre colocar &#x e o numero do codepoints-->
+        &#x1f525;
+    </p>
+
+    <h1>Desafio do mapa</h1>
+    <img src="../ex001/mapa01.png" alt="pdc1">
+    <img src="../ex001/mapa02.png" alt="pdc2">
+    <img src="../ex001/mapa03.png" alt="pdc2">
+    <img src="../ex001/mapa04.png" alt="pdc2">
+    <img src="../ex001/mapa05.png" alt="pdc2">  
+    <img src="../ex001/mapa07.png" alt="pdc2">
+    <img src="../ex001/mapa08.png" alt="pdc2">
+    <img src="../ex001/mapa09.png" alt="pdc2">
+    <img src="../ex001/mapa06.png" alt="pdc2">
+
+
+
+    <h1>Trabalhando com listas</h1>
+    <h2>Listas ordernadas</h2>
+    <ol type="1" start="4"> <!-- No type vc pode uar 1 para numeros, A ou a para alfabeto e I or i para numeros romanos. SE vc quiser que comece com um numero que nao seja o 0 vc coloca o start e o numero que para inciar-->
+        <li>Acordar</li>
+        <li>Tomar cafe</li>
+        <li>Escovar os dentes</li>
+    </ol>
+
+    <h2> Listas nao ordenadas</h2>
+    <ul type="disc"> <!--OPCAO disc, square and circle-->
+        <li>Pao
+        <li>Queijo
+        <li>Carne
+    </ul>
+
+    <h2> Minhas linguagens favoritas</h2>
+    <ol>
+        <li>Novas</li>
+        <ol type="a">
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+
+        </ol>
+        <li>Antigas</li>
+        <ol type="a" start="5">
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+        </ol>   
+    </ol>
+
+    <!--Mesclar UL with OL-->
+
+    <h2>Meus jogos favoritos</h2>
+    <ol>
+        <li>NINTENDO</li>
+        <ul type="square">
+           <li>Mario Bros</li> 
+            <ul type="circle">
+                <li>Mario Bros 3</li>
+                <li>Mario: Lost Levels</li>
+            </ul>
+           <li>Ninja Gaiden</li>
+        </ul>
+        <li>SNES</li>
+        <ul type="square">
+            <li>Mario</li>
+            <li>Donkey kong</li>  
+        </ul>             
+    </ol>
+    
+    <h2>Lista de de definicoes</h2> 
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcacao para a criacao do conteudo de um site.</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcacao para o design de um site</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programacao para a criacao de interatividade de um site</dd>
+    </dl>
+
+    <h1>Trabalhando com links</h1>
+    <h2>Usando links externos</h2>    <!--Target=blank significa abrir em uma outra gruia e rel=external significa o site nao e seu-->
+    <p>voce pode acessar o meu <a href="http://gustavoguanabara.github.io/" target="_blank" rel="external"> repositorio publico no GitHub</a></p>
+    <p>voce tambem pode acessar o meu <a href="http://youtube.com/cursoemvideo/" target="_blank" rel="external"> canal gratuito no youtube</a></p>
+                                    <!--o   href= e o link que o clientr sera direcionado-->
+    <h2>Usando links internos</h2>
+    <p>Esta e a primeira pagina do site. Se vc quiser, pode acessar tambem a minha <a href="pg002.html" target="_self" rel="next">segunda pagina</a></p>
+                                    <!--o   href= e aonde a pagina esta. no rel= voce next pq a pagina vai para a pagina a seguir-->
+                                    <!--target=self means abrir no msm site-->
+    <p>voce tambem pode acessar a nossa  <a href="noticias/pg003.html" target="self" rel="next">pagina de noticias</a> </p>
+                                    <!--vc colocar rel next, vc diz para o google o qe deve ser feito (msm vc nao colocando vai funcionar, mas vc nao ta especificando)-->
+
+    <h2>Links para download</h2> 
+    <ul>
+        <li> <a href="livro/book.pdf" download="book.pdf" type="application/pdf">Baixar o livro em PDF.</a> </li>
+        <!--href= vc coloca o pdf. Download= o nome do arquivo. Type= vc precisa colocar o tipode arquivo que sera baixado such as PDF, XML, ZIP, tem um site para achar o nome certo para colocar https://www.iana.org/assignments/media-types/media-types.xhtml -->
+        <li> <a href="livro/book.zip" download="FDPPPP" type="application/zip">Livro compactado em ZIP</a> </li>
+    </ul>
+
+    <h1>Criando minha page</h1>
+    <h2>Minhas redes sociais</h2>
+
+    <h3>Quem sou eu?</h3>
+    <img src="../ex001/paisagem.jpg" alt="minha foto">
+    <p>Meu nome e erika, tenho 28 anos, sou formada em administracao. Sou entusiasta ao conhecimento. Tecnologia e uns dos assuntos que eu sempre tive interesse e agora estou depositando meu tempo livre para aprender.</p>
+    
+    <h3>Como falar comigo?</h3>
+    <ul type="round">
+              <!-- para adicionar a figura no inicio do paragrafo, usei o site https://fontawesome.com/, escolha a figura e copie o link em html, vc precisa adicionar no head o caiminho do site awesowe-->
+        <li> <i class="fa-brands fa-instagram"></i> <a href="https://www.youtube.com/watch?v=GZnW32BNllg" target="_blank" rel="external">GimenesErika</a> Se inscreve la no meu canal do Youtube</li>
+        <li> <i class="fa-brands fa-facebook"></i> <a href="https://www.instagram.com/fernandalima/?__coig_restricted=1" target="_blank" rel="external">GimenesErika</a>Me segue la no Instagram .</li>
+        <li> <i class="fa-brands fa-youtube"></i> <a href="https://www.facebook.com/erika.gimenes.12/" target="_blank" rel="external">GimenesErika</a>Me acompanha no Facebook .</li>
+    </ul>
+
+    <h1>Desafio Tags</h1>
+    <h2>Tags em HTML</h2>
+
+    <p>Em HTML5, podemos inserir os elementos da lista a seguir. Passe o mouse sobre os termos para descobrir a tag que devera ser usada em cada caso</p>
+    <ul>
+        <!--a TAG abbr e pra quando vc quer que aparece mensagem quando passa o mouse por cima de um texto-->
+        <li><abbr title="usar letra p">Paragrafos</abbr> </li>
+        <li><abbr title="usar letra t">Titulos</abbr> </li>
+        <li><abbr title="usar img">Imagens</abbr> </li>
+        <li><abbr title="usar abbr">Abreviacoes</abbr> </li>
+        <li><abbr title=""></abbr> Codigo-fonte</li>
+        <li><abbr title="usar ol">Lista-numerada</abbr> </li>
+        <li> <abbr title="use OL">Lista com de marcacoes</abbr>  </li>
+    </ul>
+
+    <h1>Midia em HTML5</h1>
+    <h2>Imagem dinamica</h2>
+    <p>Tente abrir esse site em varios dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture> <!--aqui em picture vc vai colocar fotos de diferentes tamanhos para se adequar ao tamanho da tela do dispositivo (celular, pc, tablet etc) e fazer o navegador carregar a foto certa para cada situacao. -->
+        <source media="(max-width:750px )" srcset="../ex001/phto-p.png" type="image/jpg">
+        <!--Source media type para configurar nesses parametros-->
+        <!--media=indica o tamanho maximo a ser considerado para carregar a imagem do atributo srcset-->
+        <!--max-width: can't go higher but smaller
+            min-width: can't go smaller but higher-->
+        <!--coloca o caminho da imagem para aparecer no website-->
+        <!--type= vai indicar o type da foto, png, jpg...-->
+        <source media="(max-width:1050px)" srcset="../ex001/photo-m.png" type="image/jpg">
+        <img src="../ex001/photo-g.png" alt="imagem flexivel"> <!-- a foto nessa tag sera a padrao-->
+    </picture>
+
+    <h1>ADICIONANDO AUDIO NA SUA WEBPAGE</h1>
+    <!--va no youtube, vc tem que ta sua conta cadastrada no youtube, clique no seu nome, va em biblioteca de audio (atribuicao nao necessaria- vc nao precisa das credito ao criador da musica. atribuicao necessaria - vc precisa copiar um texto que parece na propria musica), audios grandes pode deixar o seu site pesado, tome cuidado-->
+    <audio preload="metadata" src="../ex001/media/Sad Eyed Waltz.mp3" controls autoplay loop></audio>
+    <!--PRELOAD: AUTO - so vai considerar que site terminou de carregar, depois que carregar todo o audio tbm, se vc colocar um podcast pesado, isso pode ser um problema.
+     Metadata- vai carregar o nome do arquivo e algumas informacoes 
+     None - vai carregar nada, so quando o usario clicar no botao de play.-->
+     <!--controls- vc adiciona se vc quiser que aparece o play na parte inferior da web-->
+     <!--se quiser colocar opcoes para q se um audio no abrir, abrir em outro formato como:MP3 e OGG , fazer do jeito abaixo-->
+     <!--para converter em outros formatos precisa de conversor-->
+    <audio> 
+        <source src="media/guanacast-33.mp3" type="audio/mpeg">
+        <source src="media/guanacast-33.ogg" type="audio/ogg">
+    <p>Infelizmente seu navegador nao consegue reproduzir o audio. <a href="../ex001/media/Sad Eyed Waltz.mp3">clique aqui para baixar o arquivo MP3. </a></p>
+    </audio>
+
+    <h1>Inserindo videos hospedados localmente.</h1>
+    <p>Este video esta hospedado no meu proprio servidor.</p>
+    <video src="../ex001/media/meuvideo.mp4" width="300px" controls> <!--MP4(MPEG), Ogv e webm, geralmente sao esses que sao adicionados para abrir nos navegadores, se precisar converter, buscar no google por um convertor-->
+    </video>
+
+    <!--outro jeito de colocar video, vc coloca os formatos de videos para que se um nao abrir no vangeador o outro abra-->
+
+    <!--poster add a capa no video-->
+    <h1>Outro jeito de add Video na sua pagina</h1>
+    <video width="500" poster="../ex001/espaco.jpg " controls>
+        <source src="../ex001/media/meuvideo.mp4" type="video/mp4">
+        <source src="../ex001/media/Meuvideo.webm" type="video/webm">
+        <p>Seu navegador nao tem compatibilidade com a reproducao de video</p>
+    </video>
+
+    <h1> Inserindo videos do Youtube</h1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bqXiAgueAO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+    <h1>Criando uma navegacao</h1>
+    <h2>Desafio da navegacao</h2>
+    <p>Esta e a pagina principal, o indice do seu site. E a pagina cinza. A partir dela voce pode acessar as outras areas principais atraves dos links</p>
+    <ul>
+        <li> <a href="../ex001/pg004.html" target="self" rel="next">Acessar a area verde</a>  </li>
+        <li> <a href="../ex001/pg005.html" target="self" rel="next">Acessar a area amarela</a>  </li>
+    </ul>
+
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Paragrafos tambem sao box-level, mas os <a href="@">links sao exemplos de inline-level.</a>Vamos ver como tudo isso funciona. </p>
+
+
+
+
+
+
+</body>
+</html>
+ 
