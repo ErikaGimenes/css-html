@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meclagem de celulas</title>
+    <style>
+        table{
+            height: 300px;
+            width: 300px;
+            border-collapse: collapse; /* faz com que as linhas da tabela se unam */
+            text-align: center;
+        }
+
+        td {
+            border: 2px solid black;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1> Mesclagem de celulas</h1>
+    <table>
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td> <!--quando vc quer mesclar a coluna, vc usa colspan e para linha rowspan-->
+        </tr>
+        <tr>
+            <td rowspan="3">D</td>
+            <td>E</td>
+            <td rowspan="2">F</td>
+        </tr>
+        <tr>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td colspan="2">M</td>
+        </tr>
+        
+
+
+    </table>
+    
+</body>
+</html>

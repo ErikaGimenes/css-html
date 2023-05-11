@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 400px;
+            border-collapse: collapse; 
+            position: relative; /* aqui e um dos steps para fazer o cabecalho fixar no navegador*/
+        }
+
+        th, td {
+            border: 1px solid black;
+        }
+
+        thead, tfoot {
+            background-color: #7fffd4;
+        }
+
+        thead > tr >th { /* aqui e para fazer o cabecalho fixar no navegador*/
+            position: sticky;
+            top: -1px;
+            background-color: #7fffd4; /* vc precisa colocar a cor do thead pra fazer fixar tbm, do contrario so os titulos ficarao fixos */
+        }
+
+        .num {
+            text-align: right;
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: lightgrey; /*aqui vai colorir em cinza a duas linha uma linha vai ser cinza, facilita para ler tabelas grandes, pode usar odd (impar em ingles, a todo celula impar sera pintada em cinza, ou em par e o msm sera aplicado) */
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <table>
+        <caption>Populacao das unidades federativas</caption> <!--caption e a legenda da tabela, aqui e o uso semantico, por isso que usa caption ao inves de outro elemento-->
+        <thead>
+            <tr>
+                <th scope="col">Estado</th> <!--sempre que for um titulo na tabela e o th, precisa usar isso para o html entender o significado do elemento que vc usando-->
+                <th scope="col" style="width: 50px;">Populacao </th> <!--scope ele nao vai fazer nenhuma alteracao visual, ele otimiza a busca no google, 'col'siginifica coluna, entao ele diz que as informacoes ta naquela coluna, e se tiver em linha usar 'row'-->
+            </tr> 
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sao Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>Parana</td>
+                <td class="num">11.433.957</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9.557.071</td>
+            </tr>
+            <tr>
+                <td>Ceara</td>
+                <td class="num">9.132.078</td>
+            </tr>
+            <tr>
+                <td>Para</td>
+                <td class="num">8.602.865</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7.164.788</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+             <tr>
+             <th scope="row">total de habitantes</th> <!--titulo-->
+             <td><strong>210.147.125</strong></td>
+             </tr>
+        </tfoot>
+    </table>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum labore incidunt ab obcaecati doloremque, adipisci placeat fugit exercitationem nemo, odio fugiat in iusto, modi asperiores? Dolore velit voluptatem ipsa id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fugiat, expedita delectus eum iste illum velit laborum exercitationem officiis, quam quos minus totam doloremque fugit. Saepe officia rem blanditiis pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio illum quod quia doloribus, inventore atque, voluptatibus culpa libero iure molestiae cumque laborum similique nobis temporibus tenetur impedit blanditiis autem dolores.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum labore incidunt ab obcaecati doloremque, adipisci placeat fugit exercitationem nemo, odio fugiat in iusto, modi asperiores? Dolore velit voluptatem ipsa id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fugiat, expedita delectus eum iste illum velit laborum exercitationem officiis, quam quos minus totam doloremque fugit. Saepe officia rem blanditiis pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio illum quod quia doloribus, inventore atque, voluptatibus culpa libero iure molestiae cumque laborum similique nobis temporibus tenetur impedit blanditiis autem dolores.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum labore incidunt ab obcaecati doloremque, adipisci placeat fugit exercitationem nemo, odio fugiat in iusto, modi asperiores? Dolore velit voluptatem ipsa id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fugiat, expedita delectus eum iste illum velit laborum exercitationem officiis, quam quos minus totam doloremque fugit. Saepe officia rem blanditiis pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio illum quod quia doloribus, inventore atque, voluptatibus culpa libero iure molestiae cumque laborum similique nobis temporibus tenetur impedit blanditiis autem dolores.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum labore incidunt ab obcaecati doloremque, adipisci placeat fugit exercitationem nemo, odio fugiat in iusto, modi asperiores? Dolore velit voluptatem ipsa id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fugiat, expedita delectus eum iste illum velit laborum exercitationem officiis, quam quos minus totam doloremque fugit. Saepe officia rem blanditiis pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio illum quod quia doloribus, inventore atque, voluptatibus culpa libero iure molestiae cumque laborum similique nobis temporibus tenetur impedit blanditiis autem dolores.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum labore incidunt ab obcaecati doloremque, adipisci placeat fugit exercitationem nemo, odio fugiat in iusto, modi asperiores? Dolore velit voluptatem ipsa id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur fugiat, expedita delectus eum iste illum velit laborum exercitationem officiis, quam quos minus totam doloremque fugit. Saepe officia rem blanditiis pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio illum quod quia doloribus, inventore atque, voluptatibus culpa libero iure molestiae cumque laborum similique nobis temporibus tenetur impedit blanditiis autem dolores.</p>
+
+    
+</body>
+</html>

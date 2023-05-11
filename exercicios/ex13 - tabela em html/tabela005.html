@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio de tabelas</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 500px;
+            text-align: center;
+        }
+
+        caption {
+            font-weight: bold;
+        }
+
+        th, td {
+            border: 1px solid black;
+        }
+
+        .col1 {
+            background-color: blue;
+        }
+
+        .col2 {
+            background-color: blueviolet;
+        }
+
+        .col3 {
+            background-color: yellow;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>exercicio de tabelas</h1>
+    <table>
+        <colgroup> <!--aqui vc coloca quando vc precisar formatar as colunas, ai cada col embaixo significa uma coluna-->
+            <!-- caso a configuracao que vc for fazer se aplicar para duas ou mais colunas, vc pode usar uma formatacao para as colunas formatadas, usando o span='3' indicando a quantidades de colunas que serao iguais, lembrando que precisa ser colunas em seguida -->
+            <col class="col1">
+            <col class="col2">
+            <col class="col3" span="2"> <!--aqui quer dizer que as duas ultimas colunas serao com a msm formatacao-->
+    
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissao</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Joao Gomes</td>
+            <td>M</td>
+            <td>32</td>
+            <td>Medico</td>
+        </tr>
+        <tr>
+            <td>Diego sousa</td>
+            <td>M</td>
+            <td>28</td>
+            <td>Engenheiro</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
