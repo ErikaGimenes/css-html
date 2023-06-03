@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo de formulario</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <div>
+            <label for="iest">Estado:</label>
+            <select name="estado" id="iest" required>
+                <option value="" selected>--- Escolha ---</option>
+                <optgroup label="Regiao sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="SP">Sao Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                </optgroup>
+
+                <optgroup label="regiao nordeste">
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="MA">Maranhao</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div>
+            <label for="iprof">Profissao:</label>
+            <input type="text" name="prof" id="iprof" list="listprof" required>
+            <datalist id="listprof"> <!--no datalist permite que o usuarioe escreva, caso ele nao ache uma opcao-->
+                <option>Administrador</option>
+                <option>Contador</option>
+                <option>Professor</option>
+            </datalist>
+        </div>
+        
+        <div>
+            <label for="imsg">Mensagem:</label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10" maxlength="100" required placeholder="escreva sua mensagem..." style="resize: none;"></textarea>
+            <!--no textarea o usuario pode alterar o tamanho da box, se vc quiser que isso nao aconteca, coloque resize: none
+            maxlength e quantidade maxima de caracteres-->
+        </div>
+
+        <div>
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
+        </div>
+    </form>
+
+</body>
+</html>

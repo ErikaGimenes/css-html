@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1>meu primeiro formulario</h1>
-    <form action="cadastro.php" autocomplete="off"> <!--autocomplete vc desliga a caixinha qye sugere para preenvher automaricamente-->
+    <form action="cadastro.php" method="get" autocomplete="off"> <!--GET tudo que for digitado no formulario ira aparecer na barra de url em cima do navegador (quando as informacoes pode ser abertas, usar o GET) POST esconde essas informacoes e quando vc precisa enviar arquivos (QUANDOinformacoes sigilozas como cartao de credito, senha). autocomplete vc  desliga a caixinha qye sugere para preenvher automaricamente-->
         <p><label for="inome">Nome</label>: 
             <input type="text" name="nome" id="inome"></p> <!--na label vc vai precisar a id do seu input para a label pode sincronizar com o elemento input, a label faz com o navegador entenda o p (nome) tem ligao com a caixinha ao lado (nome do usuario). NAME e ID   pode ser o msm nome (id vc usa para o javascript e label identificar e o name para o php e javascript)-->
         <p><label for="isobrenome"></label> Sobrenome:

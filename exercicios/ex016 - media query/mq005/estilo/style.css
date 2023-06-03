@@ -1,0 +1,73 @@
+@Chartset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body, html {
+    background-color: lightgray;
+}
+
+h1 {
+    text-align: center;
+
+}
+
+#menu-burguer {
+    background-color: pink;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#menu-burguer:hover {
+    background-color: white;
+    color: pink;
+}
+header {
+    background-color: plum;
+}
+
+header > h1 {
+    padding: 10px;
+    text-align: center;
+}
+
+menu {
+    display: none; /* aqui coloquei none pq nao e para aparecer quando o usuario carregar a pagina, apenas quando clicar no menu */
+}
+
+menu > ul > {
+    list-style-type: none; /* aqui e descoracao do lado das opcoes do menu */
+}
+
+menu > ul > li > a {
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: white;
+    border-top: 2px solid lightgray;
+}
+
+menu > ul > li > a:hover {
+    background-color: purple;
+}
+
+main {
+    width: 90vw;    
+    background-color: white;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+main h2 {
+    padding: 10px;
+    text-align: center;
+}

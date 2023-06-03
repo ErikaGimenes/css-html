@@ -1,0 +1,8 @@
+@charset "UTF-8";
+ 
+/* ORIENTACAO HORIZONTAL */
+
+body {
+    background-image: url(../photos/cev-landscape.jpg);
+    background-position: left bottom;
+}

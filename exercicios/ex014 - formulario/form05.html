@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>formulario </h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>sexo</legend>
+            <input type="radio" name="sexo" id="isxmas" value="M">
+            <label for="isxmas">masculino</label><br>
+            <input type="radio" name="sexo" id="isxfem" value="F" checked> <!-- o checked vc deixa checkbox ja ticado, o usuario pode escolher outra opcao, no input radio, quando vc quer que o usuario apena selecione uma das opcoes todos os input precisam estar com o msm name -->
+            <label for="isxfem">feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="esbas" id="iesbas"> <!--vc colocar a label e input juntos para linkar um ao outro, entao quando clicar exemplo na palavra basquete o navegador vai ticar na checkbox-->
+            <label for="iesbas">basquete</label><br>
+            <input type="checkbox" name="esfut" id="iesfut"> 
+            <label for="iesfut">futebol</label><br>
+            <input type="checkbox" name="esnat" id="iesnat"> 
+            <label for="iesnat">natacao</label><br>
+            <input type="checkbox" name="esten" id="iesten"> 
+            <label for="iesten">tenis</label><br>
+        </fieldset>
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
+        </p>
+    </form>
+    <!-- SEMPRE FAZER TESTE ANTES, CLICAR NOS BOTOES PRA VER SE ESTA ENVIANDO -->
+</html>

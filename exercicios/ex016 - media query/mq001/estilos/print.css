@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/* ESTILOS PARA IMPRESSORAS */
+
+* {
+    margin: 10px;
+    padding: 10px;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace; /* essa fonte facilita a leitura no papel */
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+menu {
+    display: none; /* AQUi na opcao imprimir o menu nao ira aparecer */
+}
+
+article {
+    width: 100%; /* na impressora o texto pode ocupar a folha inteira */
+}
+
+article::after {
+    content: "Esse artigo foi impresso atraves do site www.cursoemvideo.com";
+}
+    

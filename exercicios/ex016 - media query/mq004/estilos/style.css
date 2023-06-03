@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/* VERSAO MOBILE FIRST */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /* The box-sizing CSS property sets how the total width and height of an element is calculated. */
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    background: black url(../photo/back-phone.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.719); /* usei a transparencia para a foto de tras aparecer */
+    width: 70vw;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+}
+
+img {
+    display: block;
+    margin: auto; /* a img fica no centro */
+}
+
+img#pc { display:none; }
+img#tv { display:none; }
+img#tablet { display:none; }
+img#print { display:none; }
+img#phone { display:block; }

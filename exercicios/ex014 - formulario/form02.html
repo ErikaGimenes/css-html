@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de formulario</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu">Usuario: </label>
+            <input type="text" name="usu" id="iusu" autocomplete="username" required minlength="8" maxlength="20" size="10" placeholder="nome usuario"> <!--sempre que for obrigatorio o preenchimento, colocar o required para que o usuario so consiga enviar preenchendo esse campo. 
+            Size e o tamanho da box que usario vai digitar, eu coloquei 10 o que significa que  10 letras ficarao visiveis
+            autocomplete=username usa para sugerir os username mais utilizados pelo usuario -->
+        </p>
+        <p>
+            <label for="isen">Senha:</label>
+            
+            <input type="password" name="sen" id="isen" autocomplete="current-password" required minlength="8" size="15" placeholder="min 9 letras"> <!--minlegth e a quantidade minina de caracteres que precisa ser digitada-->
+       <!-- autocomplete= current-password means para login que o usuario ja tem o login criado, entao o navegador ira usa-lo, new-password means o usario esta criando um novo login, entao o navageador iria sugerir senhas salvas no pc dele. -->
+        </p>
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
+        </p>
+    </form>
+</body>
+</html>

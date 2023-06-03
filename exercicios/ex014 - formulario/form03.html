@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste formulario</h1>
+    <form action="cadastro.php" method="get">
+        <p>
+            <label for="inome">nome</label>
+            <input type="text" name="nome" id="inome" required maxlength="30" placeholder="nome completo" autocomplete="username" placeholder="0 a 10" step="0.5">
+       <!-- type=text aceita tando textos quanto numeros dgitados pelo usuario, type=number so aceita numeros, no step vc configura o numero para quando ele nao e inteiro, nesse caso 0.5 vai dizer ao navegador comecar do 0 e mudar para 0.5 e assim por diante -->
+        </p>
+
+        <p>
+            <label for="imedia">Media</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" value="4" step="0.1" required>
+      <!-- se vc ja quiser que a media seja segerida para usario vc cria o VALUE (o usuario pode alterar pra outro numero) -->
+        </p>
+        <p>
+            <label for="imes">mes letivo</label>
+            <input type="month" name="mes" id="imes" value="2023-09">
+        </p>
+        <p>
+            <label for="idate">data da prova</label>
+            <input type="date" name="data" id="idate">
+        </p>
+
+        <p>
+            <label for="ihour"></label>
+            <input type="time" name="time" id="ihour">
+        </p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
+        
+    </form>
+    
+</body>
+</html>

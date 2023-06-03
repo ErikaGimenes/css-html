@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* configuracoes para os tamanhos de telas 
+
+Typical Device Breakpoints /* as medidas estao sempre mudando, entao sempre consultar na internet 
+- pequenos devices: ate 600px;
+- celular: 600 ate 768px;
+- tablet: 768px ate 992px;
+- Desktop: 992px ate 1200px;
+- grandes telas: acima 1200px;
+
+aqui nao precisa colocar para pequenos devices e celular pq a gente vex mobile first no css o que ja esta formatado para ambos */
+ 
+@media print { /* IMPRESSAO */
+     body {
+        background-image: url(../photo/back-print.jpg); /* na hora imprimir o background nao ira ser impresso, no caso essa imagem e so exemplo */
+     }
+
+     main {
+        border: 2px solid black;
+        width: 90vw; /* a imagem vai ficar 90% do papel*/
+    }
+     
+    main h1 {
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: none;
+        color: black;
+    }
+
+    img#pc { display:none; }
+    img#tv { display:none; }
+    img#tablet { display:none; }
+    img#print { display:block; }
+    img#phone { display:none; }
+
+}
+
+@media screen and (min-width: 760px) and (max-width: 992px) { /* TABLET */
+
+    body {
+        background-image: url(../photo/back-tablet.jpg); 
+    }
+
+    img#pc { display:none; }
+    img#tv { display:none; }
+    img#tablet { display:block; }
+    img#print { display:none; }
+    img#phone { display:none; }
+
+}
+
+@media screen and  (min-width:992px) and (max-width:1200px) { /* DESKTOP */
+
+    body {
+        background-image: url(../photo/back-pc.jpg);
+    }
+
+    img#pc { display:block; }
+    img#tv { display:none; }
+    img#tablet { display:none; }
+    img#print { display:none; }
+    img#phone { display:none; }
+
+}
+
+@media screen and (min-width:1200px) { /* GRANDES TELAS */
+
+    body {
+        background-image: url(../photo/back-tv.jpg);
+    }
+
+    img#pc { display:none; }
+    img#tv { display:block; }
+    img#tablet { display:none; }
+    img#print { display:none; }
+    img#phone { display:none; }
+
+}
